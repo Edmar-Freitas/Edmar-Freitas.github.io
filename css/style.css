@@ -59,6 +59,11 @@ h2 {
   font-size: 0.9rem;
 }
 
+.skills i {
+  margin-right: 0.4rem;
+  color: #38bdf8;
+}
+
 .project {
   background: var(--card);
   padding: 1.2rem;
