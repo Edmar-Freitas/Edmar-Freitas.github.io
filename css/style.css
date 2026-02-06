@@ -34,6 +34,42 @@ body {
   text-align: center;    /* centraliza texto */
 }
 
+/* Container da frase de efeito */
+.hero-headline {
+    margin: 20px 0;
+    padding: 0 10%; /* Garante que não encoste nas bordas */
+    text-align: center;
+}
+
+/* Estilo principal da frase */
+.tagline {
+    font-family: 'Inter', 'Montserrat', sans-serif;
+    font-size: 1.5rem; /* Tamanho imponente */
+    font-weight: 800;  /* Extra Bold para autoridade */
+    line-height: 1.2;
+    letter-spacing: -0.02em; /* Estética moderna de design UI */
+    color: #ffffff;
+    max-width: 800px;
+    margin: 5px auto;
+    border-left: 0px solid transparent; /* Para manter o alinhamento com os títulos das seções */
+}
+
+/* Efeito de destaque nas palavras-chave */
+.tagline span {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Subtexto de apoio (opcional) */
+.sub-tagline {
+    font-size: 1.0rem;
+    color: #a0aec0; /* Cinza azulado elegante */
+    margin-top: 15px;
+    font-weight: 400;
+}
+
 .profile-photo {
   width: 140px;
   height: 140px;
@@ -57,11 +93,13 @@ section {
 
 h1 {
   color: var(--text);
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 h2 {
   margin-bottom: 1rem;
-  border-left: 4px solid var(--accent);
+  border-left: 2px solid var(--accent);
   padding-left: 0.75rem;
 }
 
@@ -156,6 +194,29 @@ footer {
   padding: 1.5rem 0;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+/* Definição da Animação */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Começa 20px abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Termina na posição original */
+    }
+}
+
+/* Aplicação na frase */
+.hero-headline {
+    animation: fadeInUp 1.2s ease-out forwards; /* 1.2 segundos de duração */
+}
+
+/* Delay para o subtexto (ele aparece um pouquinho depois) */
+.sub-tagline {
+    opacity: 0; /* Começa invisível */
+    animation: fadeInUp 1s ease-out 0.5s forwards; /* Começa após 0.5s */
 }
 
 /* 📱 Responsividade */
