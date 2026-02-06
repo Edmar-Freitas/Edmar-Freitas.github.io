@@ -34,6 +34,39 @@ body {
   text-align: center;    /* centraliza texto */
 }
 
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  background-color: #000b2e;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+h1 {
+  color: var(--text);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  border-left: 2px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
 /* Container da frase de efeito */
 .hero-headline {
     margin: 20px 0;
@@ -68,39 +101,6 @@ body {
     color: #a0aec0; /* Cinza azulado elegante */
     margin-top: 15px;
     font-weight: 400;
-}
-
-.profile-photo {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  color: var(--muted);
-  margin-top: 0.5rem;
-}
-
-section {
-  margin-bottom: 2rem;
-  background-color: #000b2e;
-  border-radius: 12px;
-  padding: 40px;
-}
-
-h1 {
-  color: var(--text);
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
-h2 {
-  margin-bottom: 1rem;
-  border-left: 2px solid var(--accent);
-  padding-left: 0.75rem;
 }
 
 a {
