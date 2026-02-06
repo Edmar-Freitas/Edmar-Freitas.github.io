@@ -1,5 +1,5 @@
 :root {
-  --bg: #0f172a;
+  --bg: #040c1b;
   --card: #111827;
   --text: #e5e7eb;
   --muted: #9ca3af;
@@ -14,7 +14,7 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg);
+  background: linear-gradient(135deg, #0f172a, #606992);
   color: var(--text);
   line-height: 1.6;
 }
@@ -50,12 +50,28 @@ body {
 
 section {
   margin-bottom: 2.5rem;
+  background-color: #000b2e;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+h1 {
+  color: var(--text);
 }
 
 h2 {
   margin-bottom: 1rem;
   border-left: 4px solid var(--accent);
   padding-left: 0.75rem;
+}
+
+a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent)
 }
 
 .skills {
@@ -88,30 +104,52 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-.project-image {
-  width: 160px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 6px;
-  flex-shrink: 0;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.project-card {
+  background-color: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.375);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-content {
-  flex: 1;
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(74, 74, 74, 0.593);
 }
 
-.project-content h3 {
-  margin-bottom: 0.4rem;
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-.project-content p {
-  margin-bottom: 0.6rem;
+.project-card img:hover {
+  opacity: 0.9;
 }
 
-.project a:hover {
-  text-decoration: underline;
+.project-card h4 {
+  color: #ffffff;
 }
+
+.project-card p {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/*
+.project-info {
+  margin-top: 12px;
+}
+*/
 
 footer {
   text-align: center;
